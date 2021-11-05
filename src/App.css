@@ -80,6 +80,10 @@ h2 {
   background-color: transparent;
 }
 
+.todo {
+  text-align: center;
+}
+
 .restricted-text {
   user-select: none;
 }

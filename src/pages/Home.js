@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Form from "../components/Form";
 
 export function Home() {
   return (
@@ -27,6 +28,11 @@ export function Home() {
         <div class="card card-three">
           <h2>Grapefruit</h2>
         </div>
+      </div>
+
+      <div className="todo">
+        <h1>Todo</h1>
+        <Form />
       </div>
     </div>
   );
