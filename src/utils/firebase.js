@@ -1,4 +1,11 @@
-import firebase from "firebase";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-app.js";
+
+// If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
+import { analytics } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-analytics.js";
+
+// Add Firebase products that you want to use
+import { auth } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-auth.js";
+import { firestore } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDg7RwpPsF7_r6WuxtfF6p0OzbsEXJtiB0",
@@ -12,6 +19,4 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
-export default firebase;
+initializeApp(firebaseConfig);

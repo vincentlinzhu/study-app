@@ -1,7 +1,6 @@
 import { setAnalyticsCollectionEnabled } from "@firebase/analytics";
 import React from "react";
 import { useState } from "react";
-import firebase from "../utils/firebase";
 
 export default function Form() {
   const [state, setTitle] = useState("");
