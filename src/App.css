@@ -1,9 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@500&family=Playfair+Display:ital@1&display=swap");
 * {
-  margin: 10 auto;
-  background-color: black;
+  margin: 0 ;
+  background-color: transparent;
   color: white;
   font-family: "Playfair Display", serif;
+}
+
+.App {
+  width: 100vw;
+  height: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: lightblue;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
 div {
@@ -13,23 +28,36 @@ div {
 
 .header {
   text-align: center;
-  margin-bottom: 10vh;
-  margin-top: 5vh;
+  margin-bottom: 0;
+  margin-top: 0;
+  width: 100vw;
+  top: 0%;
+  left: 0%;
+  /*transform: translate(-50%, -50%);*/
+  background-color: black;
+  position: fixed;
+  z-index: 2;
 }
 
 .timer {
   text-align: center;
+  margin-top: 5vh;
   font-size: 69px;
+  position: relative;
+  z-index: 2;
 }
 
 .navigator {
-  color: black;
+  display: hide;
+  color: white;
   font-size: large;
   border-radius: 10px;
   text-decoration: none;
   padding: 10px 20px;
   border-style: solid;
   border-width: 2px;
+  position: relative;
+  z-index: 2;
 }
 
 .navigator:hover {
@@ -39,13 +67,18 @@ div {
 }
 
 .nav-button {
+  visibility: hidden;
   text-align: center;
   width: fit-content;
   margin-bottom: 10vh;
+  position: relative;
+  z-index: 2;
 }
 
 .description {
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 .card-section {
@@ -53,28 +86,39 @@ div {
   flex-direction: row;
   margin: auto;
   margin-top: 5vh;
+  height: 40vh;
 }
 
 .card {
-  background-color: thistle;
+  background-color: transparent;
   margin: auto;
   width: 20vw;
   height: 30vh;
   border-radius: 15px;
   border-style: solid;
+  border-color: white;
   text-align: center;
   transition: 0.3s;
+  position: relative;
+  z-index: 2;
 }
 
+.hide {
+  display: none;
+}
 .card:hover {
-  background-color: skyblue;
-}
-
-.card-one:hover,
-.card-two:hover,
-.card-three:hover {
+  background-color:rgba(0, 0, 0, 0.6);
   height: 40vh;
   width: 50vh;
+}
+.card:hover .nav-button {
+  visibility: visible;
+}
+
+
+
+.card-title {
+  margin-bottom: 15vh;
 }
 
 @media (max-width: 750px) {
@@ -91,8 +135,17 @@ h2 {
 
 .todo {
   text-align: center;
+  margin-top: 2vh;
+  position: relative;
+  z-index: 2;
 }
 
 .restricted-text {
   user-select: none;
+  position: relative;
+  z-index: 2;
+}
+
+html, body {
+  margin: 0px;
 }
