@@ -8,13 +8,10 @@ export function Home() {
       <div class="header">
         <h1>Focus.</h1>
       </div>
-      <nav>
-        <div class="nav-button">
-          <Link class="navigator" to="about">
-            Create New Timer
-          </Link>
-        </div>
-      </nav>
+      <div className="timer">
+        <h1>00:00</h1>
+      </div>
+
       <div class="description">
         <h2>Make a new timer that matches your study style!</h2>
       </div>
@@ -33,6 +30,16 @@ export function Home() {
       <div className="todo">
         <h1>Todo</h1>
         <Form />
+      </div>
+
+      <div>
+        <nav>
+          <div class="nav-button">
+            <Link class="navigator" to="about">
+              Create New Timer
+            </Link>
+          </div>
+        </nav>
       </div>
     </div>
   );
