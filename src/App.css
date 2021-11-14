@@ -7,26 +7,12 @@
 
 body {
   height: 100vh;
-  background: linear-gradient(#3eb489 25%, white);
+  background: linear-gradient(#5bc69f 25%, rgb(198, 235, 192));
+  /* background-image: url(images/study.svg);
+  background-repeat: no-repeat; */
 }
 
-/* .App {
-  width: 100vw;
-  height: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: lightblue;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-} */
-
 div {
-  width: 80vw;
   margin: auto;
 }
 
@@ -37,9 +23,13 @@ div {
   width: 100vw;
   top: 0%;
   left: 0%;
-  /*transform: translate(-50%, -50%);*/
   background-color: black;
   position: fixed;
+}
+
+.pomodoro-header {
+  display: flex;
+  flex-direction: row;
 }
 
 .header-text {
@@ -69,25 +59,54 @@ div {
   border-radius: 20px;
 }
 
-.navigator {
+.card-navigator {
   display: hide;
   color: white;
   font-size: large;
   border-radius: 100px;
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 7px 17px;
   border-style: solid;
   border-width: 2px;
 }
 
-.navigator:hover {
+.card-navigator:hover {
   color: black;
   background-color: #a9eed1;
   transition-duration: 0.5s;
 }
 
-.nav-button {
+.card-nav-button {
   visibility: hidden;
+  text-align: center;
+  width: fit-content;
+  margin-bottom: 10vh;
+  transition: 0.1s;
+}
+
+.nav-button-div {
+  width: 20vw;
+}
+
+.navigator {
+  background-color: white;
+  display: hide;
+  color: black;
+  font-size: large;
+  border-radius: 100px;
+  text-decoration: none;
+  padding: 7px 17px;
+  border-style: solid;
+  border-width: 2px;
+  transition: 0.1s;
+}
+
+.navigator:hover {
+  color: black;
+  background-color: #a9eed1;
+}
+
+.nav-button {
   text-align: center;
   width: fit-content;
   margin-bottom: 10vh;
@@ -96,6 +115,11 @@ div {
 
 .description {
   text-align: center;
+}
+
+.error-description {
+  padding-left: 10vh;
+  padding-right: 10vh;
 }
 
 .card-section {
@@ -133,21 +157,13 @@ div {
   color: white;
 }
 
-.card:hover .nav-button {
+.card:hover .card-nav-button {
   transform: translate(0vh, 8vh);
   visibility: visible;
 }
 
 .card-title {
   margin-bottom: 15vh;
-}
-
-@media (max-width: 750px) {
-  .card {
-    transition-duration: 0.2s;
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 .todo {
@@ -163,4 +179,18 @@ div {
 html,
 body {
   margin: 0px;
+}
+
+.footer {
+  text-align: center;
+  width: 100vw;
+  bottom: 0;
+  background-color: black;
+  position: fixed;
+}
+
+.footer-text {
+  color: white;
+  line-height: 2em;
+  font-size: small;
 }

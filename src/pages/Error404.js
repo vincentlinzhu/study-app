@@ -7,6 +7,7 @@ export function Error404() {
       <div class="header">
         <h1 class="error-header">404 Error: This page does not exist</h1>
       </div>
+
       <nav>
         <div class="nav-button">
           <Link class="navigator" to="/">
@@ -14,7 +15,7 @@ export function Error404() {
           </Link>
         </div>
       </nav>
-      <p class="restricted-text">
+      <p class="error-description restricted-text">
         So today i was in the supermarket going to buy some cheese for the next
         week before the stores close, got 8 packages of finest Dutch. When i was
         waiting in line to pay for it a gentleman in front of me collapsed, his

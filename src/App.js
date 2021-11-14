@@ -1,7 +1,7 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
-import { About } from "./pages/About";
+import { Pomodoro } from "./pages/Pomodoro";
 import { Error404 } from "./pages/Error404";
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />}></Route>
+        <Route path="/pomodoro" element={<Pomodoro />}></Route>
         <Route path="*" element={<Error404 />}></Route>
       </Routes>
     </div>
