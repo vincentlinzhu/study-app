@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Form from "../components/Form";
+// import Form from "../components/Form";
 import Clock from "../utils/Clock";
 
 export function Home() {
@@ -49,10 +49,10 @@ export function Home() {
         </div>
       </div>
 
-      <div className="todo">
+      {/* <div className="todo">
         <h1>Todo</h1>
         <Form />
-      </div>
+      </div> */}
     </div>
   );
 }
