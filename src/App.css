@@ -1,12 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@500&family=Playfair+Display:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
 * {
-  margin: 0 ;
-  background-color: transparent;
-  color: white;
-  font-family: "Playfair Display", serif;
+  margin: 0;
+  color: black;
+  font-family: "Rubik", sans-serif;
 }
 
-.App {
+body {
+  height: 100vh;
+  background: linear-gradient(#3eb489 25%, white);
+}
+
+/* .App {
   width: 100vw;
   height: 100vw;
   display: flex;
@@ -19,7 +23,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-}
+} */
 
 div {
   width: 80vw;
@@ -36,33 +40,49 @@ div {
   /*transform: translate(-50%, -50%);*/
   background-color: black;
   position: fixed;
-  z-index: 2;
+}
+
+.header-text {
+  color: white;
+  font-size: 40px;
+}
+
+.error-header {
+  color: white;
+  line-height: 2em;
+  margin-left: 10vw;
+  width: 80vw;
 }
 
 .timer {
   text-align: center;
-  margin-top: 5vh;
+  margin-top: 10vh;
   font-size: 69px;
-  position: relative;
-  z-index: 2;
+}
+
+.clock {
+  font-size: 175px;
+  width: 900px;
+  margin: 200px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 20px;
 }
 
 .navigator {
   display: hide;
   color: white;
   font-size: large;
-  border-radius: 10px;
+  border-radius: 100px;
   text-decoration: none;
   padding: 10px 20px;
   border-style: solid;
   border-width: 2px;
-  position: relative;
-  z-index: 2;
 }
 
 .navigator:hover {
-  color: white;
-  background-color: black;
+  color: black;
+  background-color: #a9eed1;
   transition-duration: 0.5s;
 }
 
@@ -71,14 +91,11 @@ div {
   text-align: center;
   width: fit-content;
   margin-bottom: 10vh;
-  position: relative;
-  z-index: 2;
+  transition: 0.1s;
 }
 
 .description {
   text-align: center;
-  position: relative;
-  z-index: 2;
 }
 
 .card-section {
@@ -96,26 +113,30 @@ div {
   height: 30vh;
   border-radius: 15px;
   border-style: solid;
-  border-color: white;
+  border-width: thin;
+  border-color: black;
   text-align: center;
   transition: 0.3s;
-  position: relative;
-  z-index: 2;
+  line-height: 3em;
 }
 
 .hide {
   display: none;
 }
 .card:hover {
-  background-color:rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
   height: 40vh;
   width: 50vh;
 }
-.card:hover .nav-button {
-  visibility: visible;
+
+.card:hover h2 {
+  color: white;
 }
 
-
+.card:hover .nav-button {
+  transform: translate(0vh, 8vh);
+  visibility: visible;
+}
 
 .card-title {
   margin-bottom: 15vh;
@@ -129,23 +150,17 @@ div {
   }
 }
 
-h2 {
-  background-color: transparent;
-}
-
 .todo {
   text-align: center;
   margin-top: 2vh;
-  position: relative;
-  z-index: 2;
+  border-color: black;
 }
 
 .restricted-text {
   user-select: none;
-  position: relative;
-  z-index: 2;
 }
 
-html, body {
+html,
+body {
   margin: 0px;
 }

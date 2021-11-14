@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Carousel.css";
-import { images } from "../Helpers/CarouselData";
+import { images } from "../helpers/CarouselData";
 
 function Carousel() {
   const [currImg, setCurrImg] = useState(0);
@@ -9,11 +9,11 @@ function Carousel() {
     <div className="carousel">
       <div
         className="inner"
-        style={{ backgroundImage: `url(${images[currImg].img})` }}
+        // style={{ backgroundImage: `url(${images[currImg].img})` }}
       >
-        <div className="left"></div>
+        {/* <div className="left"></div>
         <div className="center"></div>
-        <div className="right"></div>
+        <div className="right"></div> */}
       </div>
     </div>
   );

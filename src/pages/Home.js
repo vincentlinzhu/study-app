@@ -2,22 +2,23 @@ import Carousel from "../components/Carousel";
 import React from "react";
 import { Link } from "react-router-dom";
 import Form from "../components/Form";
+import Clock from "../utils/Clock";
 
 export function Home() {
   return (
     <div>
-      <div className="App">
+      {/* <div className="App">
         <Carousel />
-      </div>
+      </div> */}
       <div class="header">
-        <h1>Focus.</h1>
+        <h1 class="header-text">Focus.</h1>
       </div>
       <div className="timer">
-        <h1>00:00</h1>
+        <Clock />
       </div>
 
       <div class="description">
-        <h2>Make a new timer that matches your study style!</h2>
+        <h2>Create timers that match your study style!</h2>
       </div>
       <div class="card-section">
         <div class="card card-one">
@@ -25,7 +26,7 @@ export function Home() {
           <nav>
             <div class="nav-button">
               <Link class="navigator" to="about">
-                Create New Timer
+                Create
               </Link>
             </div>
           </nav>
@@ -35,7 +36,7 @@ export function Home() {
           <nav>
             <div class="nav-button">
               <Link class="navigator" to="about">
-                Create New Timer
+                Create
               </Link>
             </div>
           </nav>
@@ -45,7 +46,7 @@ export function Home() {
           <nav>
             <div class="nav-button">
               <Link class="navigator" to="about">
-                Create New Timer
+                Create
               </Link>
             </div>
           </nav>

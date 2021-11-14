@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 export function Error404() {
   return (
     <div>
-      <h1>404 Error: This page does not exist</h1>
+      <div class="header">
+        <h1 class="error-header">404 Error: This page does not exist</h1>
+      </div>
       <nav>
         <div class="nav-button">
           <Link class="navigator" to="/">
