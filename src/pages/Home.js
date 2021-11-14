@@ -1,4 +1,3 @@
-import Carousel from "../components/Carousel";
 import React from "react";
 import { Link } from "react-router-dom";
 import Form from "../components/Form";
@@ -7,9 +6,6 @@ import Clock from "../utils/Clock";
 export function Home() {
   return (
     <div>
-      {/* <div className="App">
-        <Carousel />
-      </div> */}
       <div class="header">
         <h1 class="header-text">Focus.</h1>
       </div>
