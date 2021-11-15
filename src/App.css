@@ -1,13 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+:root {
+  --bg-color: linear-gradient( #5bc69f 30%, rgb(206, 243, 200));
+  --typewriterspeed: 4s;
+}
 * {
   margin: 0;
   color: black;
-  font-family: "Rubik", sans-serif;
+  font-family: "Source Code Pro", monospace;
+  font-weight: 600;
 }
 
 body {
   height: 100vh;
-  background: linear-gradient(#5bc69f 25%, rgb(198, 235, 192));
+  background: var(--bg-color);
   /* background-image: url(images/study.svg);
   background-repeat: no-repeat; */
 }
@@ -46,12 +52,13 @@ div {
 
 .timer {
   text-align: center;
-  margin-top: 10vh;
-  font-size: 69px;
+  margin-top: 13vh;
+  font-size: 70px;
+  line-height: 1em;
 }
 
 .clock {
-  font-size: 175px;
+  font-size: 0px;
   width: 900px;
   margin: 200px;
   text-align: center;
@@ -109,12 +116,54 @@ div {
 .nav-button {
   text-align: center;
   width: fit-content;
-  margin-bottom: 10vh;
+  margin-bottom: 8vh;
   transition: 0.1s;
 }
 
 .description {
   text-align: center;
+  margin-top: 45px;
+  position: relative;
+  right: 290px;
+  width: max-content;
+  font-size: 13px;
+}
+
+.description::before,
+.description::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.description::before{
+  
+  background: #5bc69f;
+  animation: typewriter var(--typewriterspeed) steps(42) 1s forwards;
+}
+.description::after{
+  width: .125em;
+  background: black;
+  animation: typewriter var(--typewriterspeed) steps(42) 1s forwards, blink 900ms steps(42) infinite;
+}
+
+@keyframes typewriter {
+  to { 
+    left: 100%; 
+  }
+}
+@keyframes typeBack {
+  to { 
+    right: 100%; 
+  }
+}
+@keyframes blink {
+  to {
+    background: transparent;
+  }
 }
 
 .error-description {
@@ -124,24 +173,28 @@ div {
 
 .card-section {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin: auto;
   margin-top: 5vh;
-  height: 40vh;
+  height: 50vh;
+  width: 50vw;
+  position: relative;
+  right: 300px;
 }
 
 .card {
-  background-color: transparent;
+  background-color:transparent ;
   margin: auto;
-  width: 20vw;
-  height: 30vh;
+  width: 30vw;
+  height: 10vh;
   border-radius: 15px;
   border-style: solid;
   border-width: thin;
   border-color: black;
   text-align: center;
+  align-items: center;
   transition: 0.3s;
-  line-height: 3em;
+  line-height: 4em;
 }
 
 .hide {
@@ -150,7 +203,7 @@ div {
 .card:hover {
   background-color: rgba(0, 0, 0, 0.7);
   height: 40vh;
-  width: 50vh;
+  width: 30vw;
 }
 
 .card:hover h2 {
@@ -158,18 +211,20 @@ div {
 }
 
 .card:hover .card-nav-button {
-  transform: translate(0vh, 8vh);
+  /* transform: translate(0vh, 8vh); */
   visibility: visible;
 }
 
 .card-title {
   margin-bottom: 15vh;
+  /* text-align: center; */
 }
 
 .todo {
   text-align: center;
   margin-top: 2vh;
   border-color: black;
+  float: left;
 }
 
 .restricted-text {

@@ -17,7 +17,7 @@ export function Home() {
       </div>
 
       <div class="description">
-        <h2>Create timers that match your study style!</h2>
+        <h2>Create timers to match your study style.</h2>
       </div>
 
       <div class="card-section">
