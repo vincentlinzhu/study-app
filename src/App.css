@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
 :root {
   --bg-color: linear-gradient( #5bc69f 30%, rgb(206, 243, 200));
-  --typewriterspeed: 4s;
+  --typewriterspeed: 3s;
 }
 * {
   margin: 0;
   color: black;
-  font-family: "Source Code Pro", monospace;
+  font-family: "Rubik", sans-serif, monospace;
   font-weight: 600;
 }
 
@@ -124,47 +124,24 @@ div {
   text-align: center;
   margin-top: 45px;
   position: relative;
-  right: 290px;
-  width: max-content;
-  font-size: 13px;
+  right: 300px;
+  width: 44ch;
+  font-size: 15px;
+  text-align: center;
+  border-right: solid 2px black;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing var(--typewriterspeed) steps(40) 1s, cursor 500ms steps(42) infinite;
+}
+@keyframes typing {
+  0% {width: 0;}
+  100% {width: 44ch;} 
+}
+@keyframes cursor {
+  0% {border-right-color: black;}
+  100% {border-right-color: transparent;}
 }
 
-.description::before,
-.description::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.description::before{
-  
-  background: #5bc69f;
-  animation: typewriter var(--typewriterspeed) steps(42) 1s forwards;
-}
-.description::after{
-  width: .125em;
-  background: black;
-  animation: typewriter var(--typewriterspeed) steps(42) 1s forwards, blink 900ms steps(42) infinite;
-}
-
-@keyframes typewriter {
-  to { 
-    left: 100%; 
-  }
-}
-@keyframes typeBack {
-  to { 
-    right: 100%; 
-  }
-}
-@keyframes blink {
-  to {
-    background: transparent;
-  }
-}
 
 .error-description {
   padding-left: 10vh;
