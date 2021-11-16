@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
 :root {
   --bg-color: linear-gradient( #5bc69f 30%, rgb(206, 243, 200));
   --typewriterspeed: 3s;
@@ -29,7 +28,7 @@ div {
   width: 100vw;
   top: 0%;
   left: 0%;
-  background-color: black;
+  background-color: rgb(30, 30, 30);
   position: fixed;
 }
 
@@ -116,22 +115,19 @@ div {
 .nav-button {
   text-align: center;
   width: fit-content;
-  margin-bottom: 8vh;
+  margin-bottom: 15vh;
   transition: 0.1s;
 }
 
 .description {
   text-align: center;
-  margin-top: 45px;
-  position: relative;
-  right: 300px;
   width: 44ch;
-  font-size: 15px;
+  font-size: 18px;
   text-align: center;
   border-right: solid 2px black;
   white-space: nowrap;
   overflow: hidden;
-  animation: typing var(--typewriterspeed) steps(40) 1s, cursor 500ms steps(42) infinite;
+  animation: typing var(--typewriterspeed) steps(42) 1s, cursor 500ms steps(42) infinite;
 }
 @keyframes typing {
   0% {width: 0;}
@@ -149,14 +145,14 @@ div {
 }
 
 .card-section {
+  padding: 5vh;
   display: flex;
   flex-direction: column;
   margin: auto;
-  margin-top: 5vh;
   height: 50vh;
   width: 50vw;
-  position: relative;
-  right: 300px;
+  position: absolute;
+  top: 0;
 }
 
 .card {
@@ -179,7 +175,9 @@ div {
 }
 .card:hover {
   background-color: rgba(0, 0, 0, 0.7);
-  height: 40vh;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  height: 25vh;
   width: 30vw;
 }
 
@@ -193,15 +191,105 @@ div {
 }
 
 .card-title {
-  margin-bottom: 15vh;
+  margin-bottom: 3vh;
   /* text-align: center; */
 }
 
-.todo {
+.TodoSection {
+  padding: 5vh;
+  background-color: rgb(0,0,0,0.8);
+  border-radius: 10px;
+  right: 10vh;
+  position: absolute;
+  /* display: inline-block; */
+  /* vertical-align: top; */
+}
+
+h1 {
+  color: white;
   text-align: center;
-  margin-top: 2vh;
-  border-color: black;
-  float: left;
+}
+#todo-list {
+  width: 500px;
+}
+form, .todo {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
+form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+form input {
+  border-radius: 10px;
+  padding: 4px 8px;
+  flex-grow: 1;
+  margin-right: 16px;
+}
+/* .todo {
+  display: flex;
+  flex-direction: column;
+} */
+
+.middle {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  padding: 5vh;
+}
+
+button {
+  font-size: 16px;
+  background-color: #a9eed1;
+  color: black;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-style: solid;
+  border-width: thin;
+  border-color: #a9eed1;
+}
+button:hover {
+  /* background-color: var(--bg-color); */
+  color: #a9eed1;
+  background-color: rgb(0,0,0,0.8);
+}
+button:active {
+  background-color: var(--bg-color);
+}
+button:focus {
+  outline: 0;
+}
+input[type='text'] { font-size: 20px; }
+.todo input[type="checkbox"] {
+  transform: scale(1.8) translateY(1px);
+  margin: 0 16px 0 0;
+  cursor: pointer;
+}
+.todo-text input {
+  padding: 4px;
+}
+
+.todo-words {
+  color: white;
+  text-align: left;
+}
+.todo-text {
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: flex-start;
+}
+.todo-completed {
+  display: flex;
+  margin: 10px 0;
+}
+.todo-actions {
+  display: flex;
+  justify-content: space-between;
 }
 
 .restricted-text {
@@ -217,7 +305,7 @@ body {
   text-align: center;
   width: 100vw;
   bottom: 0;
-  background-color: black;
+  background-color: rgb(30, 30, 30);
   position: fixed;
 }
 
