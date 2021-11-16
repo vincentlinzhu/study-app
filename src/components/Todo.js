@@ -5,7 +5,7 @@ const App = () => {
   const [todos, setTodos] = React.useState([]);
   const [todo, setTodo] = React.useState("");
   const [todoEditing, setTodoEditing] = React.useState(null);
-  const [editingText, setEditingText] = React.useState("");
+  const [editingText, setEditingText] = React.useState(todo.text);
 
   React.useEffect(() => {
     const json = localStorage.getItem("todos");
@@ -60,7 +60,7 @@ const App = () => {
 
   return (
     <div id="todo-list">
-      <h1>Todo List</h1>
+      <h1>What's the Plan for Today?</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
