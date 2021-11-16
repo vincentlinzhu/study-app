@@ -2,7 +2,8 @@ import React from "react";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import Card from "../components/Card";
-import Todo from "../components/Todo"
+import Todo from "../components/Todo";
+import Clock from "../utils/Clock";
 
 export function Pomodoro() {
   return (
@@ -21,26 +22,41 @@ export function Pomodoro() {
         <h1 class="header-text">Pomodoro</h1>
       </div>
 
-      <div class="description">
-        <h2></h2>
+      <div class="timer">
+        <Clock />
       </div>
-      
+
       <div class="middle">
+        <div class="description">
+          <h2>Create timers to match your study style.</h2>
+        </div>
         <div class="card-section">
-          <div class="description">
-            <h2>Create timers to match your study style.</h2>
-          </div>
           <div class="card card-one">
-            <Card name="Pomodoro" />
+            <Card
+              name="Pomodoro"
+              study="Study Time: 25 min"
+              break="Break Time: 5 min"
+              repeat="REPEAT"
+            />
           </div>
           <div class="card card-two">
-            <Card name="Time Chunking" />
+            <Card
+              name="Time Chunking"
+              study="Set a managable amount of time for first task"
+              break="Complete the task in that set of time"
+              repeat="REPEAT process with the next task"
+            />
           </div>
           <div class="card card-three">
-            <Card name="Custom" />
+            <Card
+              name="Custom"
+              study="Study Time: Custom"
+              break="Break Time: Custom"
+              repeat="REPEAT"
+            />
           </div>
         </div>
-        <div className="TodoSection"> 
+        <div className="TodoSection">
           <Todo />
         </div>
       </div>

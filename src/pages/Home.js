@@ -7,47 +7,59 @@ import Card from "../components/Card";
 
 export function Home() {
   return (
-    <div class="restricted-text content-container">
-      <div class="header">
-        <h1 class="header-text">Focus.</h1>
-      </div>
+    <div class="back">
+      <div class="restricted-text content-container">
+        <div class="header">
+          <h1 class="header-text">Focus.</h1>
+        </div>
 
-      <div class="timer">
-        <Clock />
-      </div>
+        <div class="timer">
+          <Clock />
+        </div>
 
-      
-      
-      <div class="middle">
-        <div class="card-section">
+        <div class="middle">
           <div class="description">
             <h2>Create timers to match your study style.</h2>
           </div>
-          <div class="card card-one">
-            <Card name="Pomodoro" />
+          <div class="card-section">
+            <div class="card card-one">
+              <Card
+                name="Pomodoro"
+                study="Study Time: 25 min"
+                break="Break Time: 5 min"
+                repeat="REPEAT"
+              />
+            </div>
+            <div class="card card-two">
+              <Card
+                name="Time Chunking"
+                study="Set a managable amount of time for first task"
+                break="Complete the task in that set of time"
+                repeat="REPEAT process with the next task"
+              />
+            </div>
+            <div class="card card-three">
+              <Card
+                name="Custom"
+                study="Study Time: Custom"
+                break="Break Time: Custom"
+                repeat="REPEAT"
+              />
+            </div>
           </div>
-          <div class="card card-two">
-            <Card name="Time Chunking" />
-          </div>
-          <div class="card card-three">
-            <Card name="Custom" />
+          <div className="TodoSection">
+            <Todo />
           </div>
         </div>
-        <div className="TodoSection"> 
-          <Todo />
-        </div>
-      </div>
-      
-      
-      
-      
-      {/* <div className="todo"> */}
+
+        {/* <div className="todo"> */}
         {/* <h1>Todo</h1> */}
         {/* <div className="TodoSection"> 
           <Todo />
         </div> */}
-      {/* </div> */}
-      <Footer />
+        {/* </div> */}
+        <Footer />
+      </div>
     </div>
   );
 }
