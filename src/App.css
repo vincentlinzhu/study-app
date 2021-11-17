@@ -33,6 +33,7 @@ div {
   text-align: center;
   margin-bottom: 0;
   margin-top: 0;
+  padding: 1vh;
   width: 100vw;
   top: 0%;
   left: 0%;
@@ -46,6 +47,7 @@ div {
   text-align: center;
   margin-bottom: 0;
   margin-top: 0;
+  padding: 1vh;
   width: 100vw;
   top: 0%;
   left: 0%;
@@ -54,6 +56,11 @@ div {
   z-index: 100;
   display: flex;
   flex-direction: row;
+}
+
+.pomodoro-divider {
+  height: 15vh;
+  background-color: transparent;
 }
 
 .header-text {
@@ -73,7 +80,7 @@ div {
   text-align: center;
   align-items: center;
   margin-top: 10vh;
-  margin-bottom: 5vh;
+  margin-bottom: 0vh;
   padding-top: 3vh;
   font-size: 70px;
   background-color: transparent;
@@ -153,7 +160,7 @@ div {
 .description {
   text-align: center;
   right: 23%;
-  margin-top: 12px;
+  margin-top: 20px;
   margin-bottom: 30px;
   position: relative;
   z-index: 2;
@@ -204,7 +211,7 @@ div {
   height: 40vh;
   width: 40vw;
   position: absolute;
-  top: 11vh;
+  top: 12vh;
   left: 100px;
 }
 
@@ -246,11 +253,9 @@ div {
 
 .card-title {
   background-color: transparent;
-  padding-top: 10px;
+  padding-top: 17px;
   padding-bottom: 10px;
-
-  /* margin-bottom: 1vh; */
-  /* text-align: center; */
+  text-align: center;
 }
 .card-study {
   background-color: transparent;
@@ -286,7 +291,7 @@ div {
   visibility: visible;
 }
 .temp {
-  margin-top: 15px;
+  margin-top: 4vh;
 }
 
 .TodoSection {
@@ -305,7 +310,7 @@ div {
   flex-direction: column;
   justify-content: start;
   width: 520px;
-  min-height: 310px;
+  min-height: 370px;
   background: rgb(0, 0, 0, 0.8);
   text-align: center;
   border-radius: 10px;

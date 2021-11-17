@@ -22,7 +22,7 @@ export function Pomodoro() {
           <h1 class="header-text">Pomodoro Timer</h1>
         </div>
       </div>
-
+      <div class="pomodoro-divider"></div>
       <div class="middle">
         <div className="pomodoro-timer">
           <h1 class="pomodoro-timer-text">Timer started!</h1>
