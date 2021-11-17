@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-export default function Pomodoro() {
-  const [minutes, setMinutes] = useState(1);
-  const [seconds, setSeconds] = useState(3);
+export default function PomodoroTimer() {
+  const [minutes, setMinutes] = useState(25);
+  const [seconds, setSeconds] = useState(0);
   const [breakMessage, setBreakMessage] = useState(false);
 
   useEffect(() => {
@@ -11,7 +11,7 @@ export default function Pomodoro() {
 
       if (seconds === 0) {
         if (minutes !== 0) {
-          let minutes = breakMessage ? 24 : 1;
+          let minutes = breakMessage ? 24 : 25;
           setSeconds(59);
           setMinutes(minutes - 1);
         } else {
