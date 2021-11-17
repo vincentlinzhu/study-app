@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import TodoList from "../components/TodoList";
 import Clock from "../utils/Clock";
 import Footer from "../components/Footer";

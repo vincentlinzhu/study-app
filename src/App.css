@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
 :root {
-  --bg-color:#5bc69f;
+  --bg-color: #5bc69f;
   --typewriterspeed: 3s;
 }
 * {
@@ -8,6 +8,7 @@
   /* color: black; */
   font-family: "Rubik", sans-serif, monospace;
   font-weight: 600;
+  text-decoration: none;
 }
 
 .back {
@@ -38,6 +39,7 @@ div {
   background-color: rgb(30, 30, 30);
   position: fixed;
   z-index: 100;
+  align-items: center;
 }
 
 .pomodoro-header {
@@ -50,11 +52,14 @@ div {
   background-color: rgb(30, 30, 30);
   position: fixed;
   z-index: 100;
+  display: flex;
+  flex-direction: row;
 }
 
 .header-text {
   color: white;
   font-size: 40px;
+  width: 100%;
 }
 
 .error-header {
@@ -68,6 +73,7 @@ div {
   text-align: center;
   align-items: center;
   margin-top: 10vh;
+  margin-bottom: 5vh;
   padding-top: 3vh;
   font-size: 70px;
   background-color: transparent;
@@ -112,13 +118,15 @@ div {
 }
 
 .nav-button-div {
-  width: 20vw;
+  margin-top: 10px;
+  width: 8vw;
+  position: fixed;
 }
 
-/* .navigator {
-  background-color: white;
+.navigator {
+  background-color: transparent;
   display: hide;
-  color: black;
+  color: white;
   font-size: large;
   border-radius: 100px;
   text-decoration: none;
@@ -126,11 +134,11 @@ div {
   border-style: solid;
   border-width: 2px;
   transition: 0.1s;
-} */
+}
 
 .navigator:hover {
-  color: black;
   background-color: #a9eed1;
+  color: black;
 }
 
 .nav-button {
@@ -138,16 +146,13 @@ div {
   width: fit-content;
   margin-bottom: 1vh;
   transition: 0.1s;
-  border: 2px solid black;
   border-radius: 15px;
   padding: 5px;
-  background-color: white;
 }
 
 .description {
-  background-color: transparent;
   text-align: center;
-  right: 270px;
+  right: 23%;
   margin-top: 12px;
   margin-bottom: 30px;
   position: relative;
@@ -158,17 +163,25 @@ div {
   border-right: solid 2px black;
   white-space: nowrap;
   overflow: hidden;
-  animation: typing var(--typewriterspeed) steps(44) 1s, cursor 750ms steps(44) infinite;
+  animation: typing var(--typewriterspeed) steps(44) 1s,
+    cursor 750ms steps(44) infinite;
 }
 @keyframes typing {
-  0% {width: 0;}
-  100% {width: 44ch;} 
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 44ch;
+  }
 }
 @keyframes cursor {
-  0% {border-right-color: black;}
-  100% {border-right-color: transparent;}
+  0% {
+    border-right-color: black;
+  }
+  100% {
+    border-right-color: transparent;
+  }
 }
-
 
 .error-description {
   padding-left: 10vh;
@@ -196,7 +209,7 @@ div {
 }
 
 .card {
-  background-color:transparent ;
+  background-color: transparent;
   /* margin: auto; */
   width: 30vw;
   height: 10vh;
@@ -235,7 +248,7 @@ div {
   background-color: transparent;
   padding-top: 10px;
   padding-bottom: 10px;
-  
+
   /* margin-bottom: 1vh; */
   /* text-align: center; */
 }
@@ -250,7 +263,7 @@ div {
 .card:hover .card-study {
   visibility: visible;
 }
-.card-break{
+.card-break {
   background-color: transparent;
   padding-top: 5px;
   padding-left: 10px;
@@ -261,7 +274,7 @@ div {
 .card:hover .card-break {
   visibility: visible;
 }
-.card-repeat{
+.card-repeat {
   background-color: transparent;
   padding-top: 5px;
   padding-left: 10px;
@@ -293,7 +306,7 @@ div {
   justify-content: start;
   width: 520px;
   min-height: 310px;
-  background: rgb(0,0,0,0.8);
+  background: rgb(0, 0, 0, 0.8);
   text-align: center;
   border-radius: 10px;
   padding-bottom: 32px;
@@ -307,7 +320,7 @@ div {
 
 .complete {
   text-decoration: line-through;
-  opacity: 0.4;
+  opacity: 0.3;
 }
 
 .todo-form {
@@ -317,7 +330,7 @@ div {
 .todo-input {
   padding: 14px 32px 14px 16px;
   border-radius: 4px 0 0 4px;
-  border: 2px solid #5d0cff;
+  border: 2px solid #3eb489;
   outline: none;
   width: 320px;
   background: transparent;
@@ -334,25 +347,17 @@ div {
   border-radius: 0 4px 4px 0;
   cursor: pointer;
   outline: none;
-  background: linear-gradient(
-    90deg,
-    rgba(93, 12, 255, 1) 0%,
-    rgba(155, 0, 250, 1) 100%
-  );
+  background: linear-gradient(90deg, #3eb489 0%, #5ac9a0 100%);
   color: #fff;
   text-transform: capitalize;
 }
 
 .todo-input.edit {
-  border: 2px solid #149fff;
+  border: 2px solid #3eb489;
 }
 
 .todo-button.edit {
-  background: linear-gradient(
-    90deg,
-    rgba(20, 159, 255, 1) 0%,
-    rgba(17, 122, 255, 1) 100%
-  );
+  background: linear-gradient(90deg, #3eb489 0%, #5ac9a0 100%);
   padding: 16px 22px;
 }
 
@@ -367,40 +372,25 @@ div {
   justify-content: space-between;
   align-items: center;
   margin: 4px auto;
-  color: #fff;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 118, 20, 1) 0%,
-    rgba(255, 84, 17, 1) 100%
-  );
+  color: white;
+  background: linear-gradient(90deg, #349873 0%, #4bae89 100%);
 
   padding: 16px;
   border-radius: 5px;
   width: 90%;
+  cursor: pointer;
 }
 
 .todo-row:nth-child(4n + 1) {
-  background: linear-gradient(
-    90deg,
-    rgba(93, 12, 255, 1) 0%,
-    rgba(155, 0, 250, 1) 100%
-  );
+  background: linear-gradient(90deg, #349873 0%, #4bae89 100%);
 }
 
 .todo-row:nth-child(4n + 2) {
-  background: linear-gradient(
-    90deg,
-    rgba(255, 12, 241, 1) 0%,
-    rgba(250, 0, 135, 1) 100%
-  );
+  background: linear-gradient(90deg, #349873 0%, #4bae89 100%);
 }
 
 .todo-row:nth-child(4n + 3) {
-  background: linear-gradient(
-    90deg,
-    rgba(20, 159, 255, 1) 0%,
-    rgba(17, 122, 255, 1) 100%
-  );
+  background: linear-gradient(90deg, #349873 0%, #4bae89 100%);
 }
 
 .icons {
@@ -408,6 +398,7 @@ div {
   align-items: center;
   font-size: 24px;
   cursor: pointer;
+  margin-right: 0;
 }
 
 .delete-icon {
@@ -441,4 +432,26 @@ body {
   color: white;
   line-height: 2em;
   font-size: small;
+}
+
+.pomodoro-timer {
+  margin-top: 4vh;
+  margin-left: 10vw;
+  width: 40vw;
+  height: 40vh;
+  text-align: center;
+}
+
+.pomodoro-timer-text {
+  color: black;
+}
+
+.message {
+  margin-top: 5vh;
+  font-size: 30px;
+}
+
+.pomodoro-timer-clock {
+  margin-top: 5vh;
+  font-size: 80px;
 }
