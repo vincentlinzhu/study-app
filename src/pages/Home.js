@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Todo from "../components/Todo";
+import TodoList from "../components/TodoList";
 import Clock from "../utils/Clock";
 import Footer from "../components/Footer";
 import Card from "../components/Card";
@@ -48,7 +48,9 @@ export function Home() {
             </div>
           </div>
           <div className="TodoSection">
-            <Todo />
+            <div className="todo-app">
+              <TodoList />
+            </div>
           </div>
         </div>
 

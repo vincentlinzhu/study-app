@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import Card from "../components/Card";
-import Todo from "../components/Todo";
+import TodoList from "../components/TodoList";
 import Clock from "../utils/Clock";
 
 export function Pomodoro() {
@@ -57,7 +57,9 @@ export function Pomodoro() {
           </div>
         </div>
         <div className="TodoSection">
-          <Todo />
+          <div className="todo-app">
+            <TodoList />
+          </div>
         </div>
       </div>
 

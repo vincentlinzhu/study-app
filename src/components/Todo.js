@@ -1,105 +1,46 @@
-import React from "react";
-// import "./App.css";
+import React, { useState } from "react";
+import TodoForm from "./TodoForm";
+import { RiCloseCircleLine } from "react-icons/ri";
+import { TiEdit } from "react-icons/ti";
 
-const App = () => {
-  const [todos, setTodos] = React.useState([]);
-  const [todo, setTodo] = React.useState("");
-  const [todoEditing, setTodoEditing] = React.useState(null);
-  const [editingText, setEditingText] = React.useState(todo.text);
+const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
+  const [edit, setEdit] = useState({
+    id: null,
+    value: "",
+  });
 
-  React.useEffect(() => {
-    const json = localStorage.getItem("todos");
-    const loadedTodos = JSON.parse(json);
-    if (loadedTodos) {
-      setTodos(loadedTodos);
-    }
-  }, []);
-
-  React.useEffect(() => {
-    const json = JSON.stringify(todos);
-    localStorage.setItem("todos", json);
-  }, [todos]);
-
-  function handleSubmit(e) {
-    e.preventDefault();
-
-    const newTodo = {
-      id: new Date().getTime(),
-      text: todo,
-      completed: false,
-    };
-    setTodos([...todos].concat(newTodo));
-    setTodo("");
-  }
-
-  function deleteTodo(id) {
-    let updatedTodos = [...todos].filter((todo) => todo.id !== id);
-    setTodos(updatedTodos);
-  }
-
-  function toggleComplete(id) {
-    let updatedTodos = [...todos].map((todo) => {
-      if (todo.id === id) {
-        todo.completed = !todo.completed;
-      }
-      return todo;
+  const submitUpdate = (value) => {
+    updateTodo(edit.id, value);
+    setEdit({
+      id: null,
+      value: "",
     });
-    setTodos(updatedTodos);
+  };
+
+  if (edit.id) {
+    return <TodoForm edit={edit} onSubmit={submitUpdate} />;
   }
 
-  function submitEdits(id) {
-    const updatedTodos = [...todos].map((todo) => {
-      if (todo.id === id) {
-        todo.text = editingText;
-      }
-      return todo;
-    });
-    setTodos(updatedTodos);
-    setTodoEditing(null);
-  }
-
-  return (
-    <div id="todo-list">
-      <h1>What's the Plan for Today?</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          onChange={(e) => setTodo(e.target.value)}
-          value={todo}
+  return todos.map((todo, index) => (
+    <div
+      className={todo.isComplete ? "todo-row complete" : "todo-row"}
+      key={index}
+    >
+      <div key={todo.id} onClick={() => completeTodo(todo.id)}>
+        {todo.text}
+      </div>
+      <div className="icons">
+        <RiCloseCircleLine
+          onClick={() => removeTodo(todo.id)}
+          className="delete-icon"
         />
-        <button type="submit">Add Todo</button>
-      </form>
-      {todos.map((todo) => (
-        <div key={todo.id} className="todo">
-          <div className="todo-text">
-            <input
-              type="checkbox"
-              id="completed"
-              checked={todo.completed}
-              onChange={() => toggleComplete(todo.id)}
-            />
-            {todo.id === todoEditing ? (
-              <input
-                type="text"
-                onChange={(e) => setEditingText(e.target.value)}
-              />
-            ) : (
-              <div class="todo-words">{todo.text}</div>
-            )}
-          </div>
-          <div className="todo-actions">
-            {todo.id === todoEditing ? (
-              <button onClick={() => submitEdits(todo.id)}>Submit Edits</button>
-            ) : (
-              <button onClick={() => setTodoEditing(todo.id)}>Edit</button>
-            )}
-
-            <button onClick={() => deleteTodo(todo.id)}>Delete</button>
-          </div>
-        </div>
-      ))}
+        <TiEdit
+          onClick={() => setEdit({ id: todo.id, value: todo.text })}
+          className="edit-icon"
+        />
+      </div>
     </div>
-  );
+  ));
 };
 
-export default App;
+export default Todo;

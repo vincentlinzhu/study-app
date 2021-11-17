@@ -5,7 +5,7 @@
 }
 * {
   margin: 0;
-  color: black;
+  /* color: black; */
   font-family: "Rubik", sans-serif, monospace;
   font-weight: 600;
 }
@@ -147,7 +147,7 @@ div {
 .description {
   background-color: transparent;
   text-align: center;
-  right: 330px;
+  right: 270px;
   margin-top: 12px;
   margin-bottom: 30px;
   position: relative;
@@ -158,7 +158,7 @@ div {
   border-right: solid 2px black;
   white-space: nowrap;
   overflow: hidden;
-  animation: typing var(--typewriterspeed) steps(48) 1s, cursor 750ms steps(44) infinite;
+  animation: typing var(--typewriterspeed) steps(44) 1s, cursor 750ms steps(44) infinite;
 }
 @keyframes typing {
   0% {width: 0;}
@@ -273,101 +273,150 @@ div {
   visibility: visible;
 }
 .temp {
-  margin-top: 22px;
+  margin-top: 15px;
 }
 
 .TodoSection {
-  padding: 5vh;
-  margin-top: 3vh;
-  background-color: rgb(0,0,0,0.55);
+  /* padding: 3vh; */
+  background-color: white;
   border-radius: 10px;
   right: 8vw;
+  top: 4vh;
   position: absolute;
   /* display: inline-block; */
   /* vertical-align: top; */
 }
 
-h1 {
-  color: white;
+.todo-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 520px;
+  min-height: 310px;
+  background: rgb(0,0,0,0.8);
   text-align: center;
-}
-#todo-list {
-  width: 500px;
-}
-form, .todo {
-  padding: 10px 20px;
-  /* margin-bottom: 10px; */
-}
-form {
-  display: flex;
-  justify-content: space-between;
-  /* margin-bottom: 30px; */
-}
-form input {
   border-radius: 10px;
-  padding: 4px 8px;
-  flex-grow: 1;
-  margin-right: 16px;
+  padding-bottom: 32px;
 }
 
-button {
-  font-size: 16px;
-  background-color: #a9eed1;
-  color: black;
-  border-radius: 8px;
-  padding: 8px 16px;
-  cursor: pointer;
-  border-style: solid;
-  border-width: thin;
-  border-color: #a9eed1;
-}
-button:hover {
-  /* background-color: var(--bg-color); */
-  color: #a9eed1;
-  background-color: rgb(0,0,0,0.8);
-}
-button:active {
-  background-color: var(--bg-color);
-}
-button:focus {
-  outline: 0;
-}
-input[type='text'] { font-size: 20px; }
-.todo input[type="checkbox"] {
-  transform: scale(1.8) translateY(1px);
-  margin: 0 16px 0 0;
-  cursor: pointer;
-}
-.todo-text input {
-  padding: 4px;
-}
-
-.todo-words {
-  width: 50vw;
-  border: 2px solid #a9eed1;
-  border-radius: 10px;
-  margin-right: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  color: black;
-  background-color: white;
-  /* color: white; */
-  text-align: left;
-}
-.todo-text {
+.todo-title {
+  margin: 32px 0;
+  color: #fff;
   font-size: 24px;
-  line-height: 24px;
-  margin-bottom: 16px;
-  display: flex;
-  justify-content: flex-start;
 }
-.todo-completed {
-  display: flex;
-  margin: 10px 0;
+
+.complete {
+  text-decoration: line-through;
+  opacity: 0.4;
 }
-.todo-actions {
+
+.todo-form {
+  margin-bottom: 32px;
+}
+
+.todo-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #5d0cff;
+  outline: none;
+  width: 320px;
+  background: transparent;
+  color: #fff;
+}
+
+.todo-input::placeholder {
+  color: #e2e2e2;
+}
+
+.todo-button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(
+    90deg,
+    rgba(93, 12, 255, 1) 0%,
+    rgba(155, 0, 250, 1) 100%
+  );
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.todo-input.edit {
+  border: 2px solid #149fff;
+}
+
+.todo-button.edit {
+  background: linear-gradient(
+    90deg,
+    rgba(20, 159, 255, 1) 0%,
+    rgba(17, 122, 255, 1) 100%
+  );
+  padding: 16px 22px;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.todo-row {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 118, 20, 1) 0%,
+    rgba(255, 84, 17, 1) 100%
+  );
+
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.todo-row:nth-child(4n + 1) {
+  background: linear-gradient(
+    90deg,
+    rgba(93, 12, 255, 1) 0%,
+    rgba(155, 0, 250, 1) 100%
+  );
+}
+
+.todo-row:nth-child(4n + 2) {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 12, 241, 1) 0%,
+    rgba(250, 0, 135, 1) 100%
+  );
+}
+
+.todo-row:nth-child(4n + 3) {
+  background: linear-gradient(
+    90deg,
+    rgba(20, 159, 255, 1) 0%,
+    rgba(17, 122, 255, 1) 100%
+  );
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.delete-icon {
+  margin-right: 5px;
+  color: #fff;
+}
+
+.edit-icon {
+  color: #fff;
 }
 
 .restricted-text {
