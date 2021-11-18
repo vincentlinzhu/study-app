@@ -14,7 +14,7 @@ export default function PomodoroTimer() {
           setSeconds(59);
           setMinutes(minutes - 1);
         } else {
-          setMinutes(breakMessage ? 24 : 5);
+          setMinutes(breakMessage ? 25 : 5);
           setBreakMessage(!breakMessage);
         }
       } else {
