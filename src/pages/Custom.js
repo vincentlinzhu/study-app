@@ -28,7 +28,7 @@ export function Custom() {
           <h1 class="custom-timer-text">
             Input the time in minutes and start!
           </h1>
-          <CustomTimer />
+          <CustomTimer path="" />
         </div>
         <div className="TodoSection">
           <div className="todo-app">
