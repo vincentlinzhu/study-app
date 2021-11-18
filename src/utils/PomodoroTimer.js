@@ -11,22 +11,17 @@ export default function PomodoroTimer() {
 
       if (seconds === 0) {
         if (minutes !== 0) {
-          let minutes = breakMessage ? 24 : 25;
           setSeconds(59);
           setMinutes(minutes - 1);
         } else {
-          let minutes = breakMessage ? 24 : 4;
-          let seconds = 59;
-
-          setSeconds(seconds);
-          setMinutes(minutes);
+          setMinutes(breakMessage ? 24 : 5);
           setBreakMessage(!breakMessage);
         }
       } else {
         setSeconds(seconds - 1);
       }
     }, 1000);
-  }, [seconds]);
+  }, [seconds, minutes]);
 
   const timerMinutes = minutes < 10 ? `0${minutes}` : minutes;
   const timerSeconds = seconds < 10 ? `0${seconds}` : seconds;
@@ -35,7 +30,7 @@ export default function PomodoroTimer() {
     <div className="pomodoro">
       <div className="message">
         {breakMessage ? (
-          <div>Break time! New session starts in:</div>
+          <div>Break time! Break ends in:</div>
         ) : (
           <div>Work time! Session ends in:</div>
         )}
