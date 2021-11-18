@@ -5,29 +5,30 @@
 }
 * {
   margin: 0;
-  /* color: black; */
   font-family: "Rubik", sans-serif, monospace;
   font-weight: 600;
   text-decoration: none;
 }
 
+/* Background CSS */
+
 .back {
   height: 100vh;
   background: transparent;
-  background-image: url(images/studyin.png);
+  background-image: url(media/studyin.png);
   background-repeat: no-repeat;
 }
 
 body {
   height: 100vh;
   background: var(--bg-color);
-  /* background-image: url(images/studyingCopy.png);
-  background-repeat: no-repeat; */
 }
 
 div {
   margin: auto;
 }
+
+/* Headers CSS */
 
 .header {
   text-align: center;
@@ -76,6 +77,8 @@ div {
   width: 80vw;
 }
 
+/* Home Page Clock CSS */
+
 .timer {
   text-align: center;
   align-items: center;
@@ -84,20 +87,146 @@ div {
   padding-top: 3vh;
   font-size: 70px;
   background-color: transparent;
-  /* border-bottom: 2px solid black; */
-  /* line-height: 1em; */
 }
 
-/* .clock {
-  font-size: 0px;
-  width: 900px;
-  margin: 200px;
+/* App Description CSS */
+
+.description {
   text-align: center;
+  right: 21.5%;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 2;
+  width: 44ch;
+  font-size: 18px;
+  text-align: center;
+  border-right: solid 2px black;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing var(--typewriterspeed) steps(44) 1s,
+    cursor 750ms steps(44) infinite;
+}
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 44ch;
+  }
+}
+@keyframes cursor {
+  0% {
+    border-right-color: black;
+  }
+  100% {
+    border-right-color: transparent;
+  }
+}
+
+.error-description {
+  padding-left: 10vh;
+  padding-right: 10vh;
+}
+
+/* Middle Section CSS */
+
+.middle {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  z-index: 0;
+}
+
+/* Card Section and Navigation CSS */
+
+.card-section {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  height: 40vh;
+  width: 40vw;
+  position: absolute;
+  top: 12vh;
+  left: 8vw;
+}
+
+.card {
+  background-color: transparent;
+  width: 30vw;
+  height: 10vh;
+  border-radius: 15px;
   border-style: solid;
-  border: 2px solid black;
-  border-radius: 20px;
+  border-width: thin;
   border-color: black;
-} */
+  text-align: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.hide {
+  display: none;
+}
+.card:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  height: 30vh;
+  width: 30vw;
+}
+
+.card:hover h2 {
+  color: white;
+}
+.card:hover p {
+  color: white;
+}
+
+.card:hover .card-nav-button {
+  visibility: visible;
+}
+
+.card-title {
+  background-color: transparent;
+  padding-top: 17px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.card-study {
+  background-color: transparent;
+  padding-top: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  visibility: hidden;
+}
+.card:hover .card-study {
+  visibility: visible;
+}
+.card-break {
+  background-color: transparent;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  visibility: hidden;
+}
+.card:hover .card-break {
+  visibility: visible;
+}
+.card-repeat {
+  background-color: transparent;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  visibility: hidden;
+}
+.card:hover .card-repeat {
+  visibility: visible;
+}
+.temp {
+  margin-top: 4vh;
+}
 
 .card-navigator {
   display: hide;
@@ -157,152 +286,14 @@ div {
   padding: 5px;
 }
 
-.description {
-  text-align: center;
-  right: 23%;
-  margin-top: 20px;
-  margin-bottom: 30px;
-  position: relative;
-  z-index: 2;
-  width: 44ch;
-  font-size: 18px;
-  text-align: center;
-  border-right: solid 2px black;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typing var(--typewriterspeed) steps(44) 1s,
-    cursor 750ms steps(44) infinite;
-}
-@keyframes typing {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 44ch;
-  }
-}
-@keyframes cursor {
-  0% {
-    border-right-color: black;
-  }
-  100% {
-    border-right-color: transparent;
-  }
-}
-
-.error-description {
-  padding-left: 10vh;
-  padding-right: 10vh;
-}
-
-.middle {
-  background-color: transparent;
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  z-index: 0;
-}
-
-.card-section {
-  background-color: transparent;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  height: 40vh;
-  width: 40vw;
-  position: absolute;
-  top: 12vh;
-  left: 100px;
-}
-
-.card {
-  background-color: transparent;
-  /* margin: auto; */
-  width: 30vw;
-  height: 10vh;
-  border-radius: 15px;
-  border-style: solid;
-  border-width: thin;
-  border-color: black;
-  text-align: center;
-  align-items: center;
-  transition: 0.3s;
-}
-
-.hide {
-  display: none;
-}
-.card:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-  margin-top: 2vh;
-  margin-bottom: 2vh;
-  height: 30vh;
-  width: 30vw;
-}
-
-.card:hover h2 {
-  color: white;
-}
-.card:hover p {
-  color: white;
-}
-
-.card:hover .card-nav-button {
-  visibility: visible;
-}
-
-.card-title {
-  background-color: transparent;
-  padding-top: 17px;
-  padding-bottom: 10px;
-  text-align: center;
-}
-.card-study {
-  background-color: transparent;
-  padding-top: 2px;
-  padding-left: 10px;
-  padding-right: 10px;
-  /* text-align: left; */
-  visibility: hidden;
-}
-.card:hover .card-study {
-  visibility: visible;
-}
-.card-break {
-  background-color: transparent;
-  padding-top: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  /* text-align: left; */
-  visibility: hidden;
-}
-.card:hover .card-break {
-  visibility: visible;
-}
-.card-repeat {
-  background-color: transparent;
-  padding-top: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  /* text-align: left; */
-  visibility: hidden;
-}
-.card:hover .card-repeat {
-  visibility: visible;
-}
-.temp {
-  margin-top: 4vh;
-}
+/* TodoList CSS */
 
 .TodoSection {
-  /* padding: 3vh; */
-  background-color: white;
+  background-color: transparent;
   border-radius: 10px;
-  right: 8vw;
+  right: 9vw;
   top: 4vh;
   position: absolute;
-  /* display: inline-block; */
-  /* vertical-align: top; */
 }
 
 .todo-app {
@@ -310,8 +301,8 @@ div {
   flex-direction: column;
   justify-content: start;
   width: 520px;
-  min-height: 370px;
-  background: rgb(0, 0, 0, 0.8);
+  min-height: 400px;
+  background: rgb(0, 0, 0, 0.77);
   text-align: center;
   border-radius: 10px;
   padding-bottom: 32px;
@@ -352,7 +343,7 @@ div {
   border-radius: 0 4px 4px 0;
   cursor: pointer;
   outline: none;
-  background: linear-gradient(90deg, #3eb489 0%, #5ac9a0 100%);
+  background: linear-gradient(90deg, #3eb489 0%, #5bc69f 100%);
   color: #fff;
   text-transform: capitalize;
 }
@@ -362,7 +353,7 @@ div {
 }
 
 .todo-button.edit {
-  background: linear-gradient(90deg, #3eb489 0%, #5ac9a0 100%);
+  background: linear-gradient(90deg, #3eb489 0%, #5bc69f 100%);
   padding: 16px 22px;
 }
 
@@ -378,7 +369,7 @@ div {
   align-items: center;
   margin: 4px auto;
   color: white;
-  background: linear-gradient(90deg, #349873 0%, #4bae89 100%);
+  background: linear-gradient(90deg, #349873 0%, #5bc69f 100%);
 
   padding: 16px;
   border-radius: 5px;
@@ -387,15 +378,15 @@ div {
 }
 
 .todo-row:nth-child(4n + 1) {
-  background: linear-gradient(90deg, #349873 0%, #4bae89 100%);
+  background: linear-gradient(90deg, #349873 0%, #5bc69f 100%);
 }
 
 .todo-row:nth-child(4n + 2) {
-  background: linear-gradient(90deg, #349873 0%, #4bae89 100%);
+  background: linear-gradient(90deg, #349873 0%, #5bc69f 100%);
 }
 
 .todo-row:nth-child(4n + 3) {
-  background: linear-gradient(90deg, #349873 0%, #4bae89 100%);
+  background: linear-gradient(90deg, #349873 0%, #5bc69f 100%);
 }
 
 .icons {
@@ -414,6 +405,8 @@ div {
 .edit-icon {
   color: #fff;
 }
+
+/* Random Stuff CSS */
 
 .restricted-text {
   user-select: none;
@@ -439,9 +432,11 @@ body {
   font-size: small;
 }
 
+/* Pmodoro Timer CSS */
+
 .pomodoro-timer {
   margin-top: 4vh;
-  margin-left: 10vw;
+  margin-left: 9vw;
   width: 40vw;
   height: 40vh;
   text-align: center;
@@ -459,4 +454,74 @@ body {
 .pomodoro-timer-clock {
   margin-top: 5vh;
   font-size: 80px;
+  background-color: rgb(0, 0, 0, 0.77);
+  border-radius: 15px;
+  width: 25vw;
 }
+
+.pomodoro-text {
+  color: white;
+  padding: 3vh;
+}
+
+/* Adjust Timer CSS */
+
+/* form {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.value-button {
+  display: inline-block;
+  border: 1px solid #ddd;
+  margin: 0px;
+  width: 40px;
+  height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 11px 0;
+  background: #eee;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.value-button:hover {
+  cursor: pointer;
+}
+
+form #decrease {
+  margin-right: -4px;
+  border-radius: 8px 0 0 8px;
+}
+
+form #increase {
+  margin-left: -4px;
+  border-radius: 0 8px 8px 0;
+}
+
+form #input-wrap {
+  margin: 0px;
+  padding: 0px;
+}
+
+input#number {
+  text-align: center;
+  border: none;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin: 0px;
+  width: 40px;
+  height: 40px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+} */

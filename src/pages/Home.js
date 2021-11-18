@@ -3,6 +3,8 @@ import TodoList from "../components/TodoList";
 import Clock from "../utils/Clock";
 import Footer from "../components/Footer";
 import Card from "../components/Card";
+import MusicCard from "../components/MusicCard";
+
 
 export function Home() {
   return (
@@ -27,22 +29,34 @@ export function Home() {
                 study="Study Time: 25 min"
                 break="Break Time: 5 min"
                 repeat="REPEAT"
+                path="pomodoro"
               />
             </div>
-            <div class="card card-two">
+            {/* <div class="card card-two">
               <Card
                 name="Time Chunking"
-                study="Set a managable amount of time for first task"
+                study="Set a manageable amount of time for first task"
                 break="Complete the task in that set of time"
                 repeat="REPEAT process with the next task"
+                path="chunk"
               />
-            </div>
+            </div> */}
             <div class="card card-three">
               <Card
                 name="Custom"
                 study="Study Time: Custom"
                 break="Break Time: Custom"
                 repeat="REPEAT"
+                path="custom"
+              />
+            </div>
+            <div class="card card-four">
+              <MusicCard
+                name="Music"
+                study=""
+                break="Here's some of our favorite music for studying!"
+                repeat=""
+                path=""
               />
             </div>
           </div>

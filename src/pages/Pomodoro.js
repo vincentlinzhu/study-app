@@ -24,7 +24,7 @@ export function Pomodoro() {
       </div>
       <div class="pomodoro-divider"></div>
       <div class="middle">
-        <div className="pomodoro-tdimer">
+        <div className="pomodoro-timer">
           <h1 class="pomodoro-timer-text">Timer started!</h1>
           <PomodoroTimer />
         </div>
