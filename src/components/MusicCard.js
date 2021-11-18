@@ -13,11 +13,11 @@ export default function (prop) {
       <p class="card-repeat">{prop.repeat}</p>
       <nav class="temp">
         <div class="card-nav-button">
-          {/* <button onClick={playAudio('../media/joji.mp3')}>Play/Pause</button> */}
           <audio controls>
-            <source src="../media/joji.mp3" type="audio/mpeg"/>
-            Your browser does not support the audio element.
+            <source src="media/bunny.ogg" type="audio/ogg" />
           </audio>
+
+          {/* crossorigin="use-credentials" */}
         </div>
       </nav>
     </div>
