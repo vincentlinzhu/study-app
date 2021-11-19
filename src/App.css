@@ -474,7 +474,7 @@ body {
   height: 50vh;
   text-align: center;
   background-color: rgb(255, 255, 255, 0.95);
-  border-radius: 10px;
+  border-radius: 8px;
   padding-top: 6vh;
   /* padding-bottom: 2vh; */
 }
@@ -503,25 +503,30 @@ body {
 
 #minutes {
   border: 3px solid black;
-  border-radius: 10px;
+  border-radius: 7px;
   background-color: rgb(0, 0, 0, 0.77);
-  padding: 1vh;
+  padding: 1.5vh;
+  padding-left: 2vh;
   width: 16.5vw;
   margin-top: 6vh;
   margin-bottom: 3vh;
   color: white;
   font-size: 16px;
-  margin-right: 3px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-right: 0px;
 }
 
 #start-button {
   border: 3px solid black;
   color: black;
-  border-radius: 10px;
+  border-radius: 7px;
   background-color: var(--bg-color);
-  padding: 1vh;
+  padding: 1.5vh;
   width: 8.5vw;
   font-size: 16px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
 
 #start-button:hover{
@@ -530,13 +535,13 @@ body {
   cursor: pointer;
 }
 
-.inputArea{
+/* .inputArea{
   margin-top: 4vh;
-  margin-left: 9vw;
-  width: 40vw;
+  margin-left: 0vw;
+  width: 50vw;
   height: 40vh;
   text-align: center;
-}
+} */
 
 
 
