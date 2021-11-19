@@ -1,16 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function (prop) {
+export default function(props) {
   return (
     <div>
-      <h2 class="card-title">{prop.name}</h2>
-      <p class="card-study">{prop.study}</p>
-      <p class="card-break">{prop.break}</p>
-      <p class="card-repeat">{prop.repeat}</p>
+      <h2 class="card-title">{props.name}</h2>
+      <p class="card-study">{props.study}</p>
+      <p class="card-break">{props.break}</p>
+      <p class="card-repeat">{props.repeat}</p>
       <nav class="temp">
         <div class="card-nav-button">
-          <Link class="card-navigator" to={ prop.path }>
+          <Link class="card-navigator" to={props.path}>
             Create
           </Link>
         </div>

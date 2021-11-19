@@ -32,6 +32,7 @@ export default function CustomTimer(props) {
   }
 
   function tick() {
+    console.log(props.path);
     var timeDisplay = document.getElementById("time");
 
     var min = Math.floor(mySeconds / 60);
@@ -93,10 +94,7 @@ export default function CustomTimer(props) {
           <div id="inputArea">
             <input id="minutes" type="text"></input>
             <button
-              onClick={
-                startCounter
-                // this.props.location.pathname == "custom" ? startCounter : 0
-              }
+              onClick={startCounter}
               id="start-button"
               type="button"
               value="Start Timer"
@@ -107,17 +105,6 @@ export default function CustomTimer(props) {
           <h2 id="time">0:00</h2>
         </div>
       </div>
-      {/* <div className="message">
-                <div>Enter your desired work time.</div>
-                {breakMessage ? (
-                    <div>Break time! Break ends in:</div>
-                ) : (
-                    <div>Work time! Session ends in:</div>
-                )}
-            </div> */}
-      {/* <div className="custom-timer-clock">
-                {timerMinutes}:{timerSeconds}
-            </div> */}
     </div>
   );
 }

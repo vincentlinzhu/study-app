@@ -6,14 +6,17 @@ import { Custom } from "./pages/Custom";
 import { Error404 } from "./pages/Error404";
 
 function App() {
-  const location = useLocation();
+  let location = useLocation();
   console.log(location.pathname);
   return (
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/pomodoro" element={<Pomodoro />}></Route>
-        <Route path="/custom" element={<Custom />}></Route>
+        <Route
+          path="/custom"
+          element={<Custom path={location.pathname} />}
+        ></Route>
         <Route path="*" element={<Error404 />}></Route>
       </Routes>
     </div>

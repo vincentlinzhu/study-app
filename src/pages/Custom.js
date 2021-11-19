@@ -3,8 +3,9 @@ import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import TodoList from "../components/TodoList";
 import CustomTimer from "../utils/CustomTimer";
+import MusicCard from "../components/MusicCard";
 
-export function Custom() {
+export function Custom(props) {
   return (
     <div>
       <div class="restricted-text header-container">
@@ -28,7 +29,16 @@ export function Custom() {
           <h1 class="custom-timer-text">
             Input the time in minutes and start!
           </h1>
-          <CustomTimer path="" />
+          <CustomTimer path={props.path} />
+          <div class="card card-four pomodoro-music-card">
+            <MusicCard
+              name="Music"
+              study=""
+              break="Here's some of our favorite music for studying!"
+              repeat=""
+              path=""
+            />
+          </div>
         </div>
         <div className="TodoSection">
           <div className="todo-app">
