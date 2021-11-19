@@ -13,10 +13,11 @@ export default function (prop) {
       <p class="card-repeat">{prop.repeat}</p>
       <nav class="temp">
         <div class="card-nav-button">
-          <audio controls>
-            <source src="media/bunny.ogg" type="audio/ogg" />
+          <audio controls autoplay name="media">
+            {/* <source src="../media/bunny.mp3" type="audio/mpeg" />
+            <source src="../media/bunny.ogg" type="audio/ogg" /> */}
+            <source src="/audio/bunny.ogg" type="audio/ogg"></source>
           </audio>
-
           {/* crossorigin="use-credentials" */}
         </div>
       </nav>

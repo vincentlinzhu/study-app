@@ -91,10 +91,11 @@ export default function CustomTimer(props) {
         <div id="primaryContent" class="group">
           {/* <h1>Input the time in minutes and click start</h1> */}
           <div id="inputArea">
-            <textarea id="minutes" type="text"></textarea>
+            <input id="minutes" type="text"></input>
             <button
               onClick={
-                this.props.location.pathname == "custom" ? startCounter : 0
+                startCounter
+                // this.props.location.pathname == "custom" ? startCounter : 0
               }
               id="start-button"
               type="button"
