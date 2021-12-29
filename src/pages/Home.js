@@ -5,6 +5,8 @@ import Footer from "../components/Footer";
 import Card from "../components/Card";
 import MusicCard from "../components/MusicCard";
 
+//Changed
+
 export function Home() {
   return (
     <div class="back">

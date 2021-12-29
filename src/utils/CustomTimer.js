@@ -6,24 +6,6 @@ export default function CustomTimer(props) {
   const [seconds, setSeconds] = useState(0);
   const [breakMessage, setBreakMessage] = useState(false);
 
-  // useEffect(() => {
-  //   let interval = setInterval(() => {
-  //     clearInterval(interval);
-
-  //     if (seconds === 0) {
-  //       if (minutes !== 0) {
-  //         setSeconds(59);
-  //         setMinutes(minutes - 1);
-  //       } else {
-  //         setMinutes(breakMessage ? 25 : 5);
-  //         setBreakMessage(!breakMessage);
-  //       }
-  //     } else {
-  //       setSeconds(seconds - 1);
-  //     }
-  //   }, 1000);
-  // }, [seconds, minutes]);
-
   var mySeconds;
   var intervalHandle;
 

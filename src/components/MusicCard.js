@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function(props) {
+export default function (props) {
   function playAudio(url) {
     new Audio(url).play();
   }
@@ -18,7 +18,6 @@ export default function(props) {
             <source src="../media/bunny.ogg" type="audio/ogg" /> */}
             <source src="/assets/bony.mp3" type="audio/mp3"></source>
           </audio>
-          {/* crossorigin="use-credentials" */}
         </div>
       </nav>
     </div>
